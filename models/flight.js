@@ -34,6 +34,7 @@ const flightSchema = new Schema({
         }
     },
     departs: {type: Date, default: Date.now(+1)},
+    tickets: [{type: Schema.Types.ObjectId, ref: 'Ticket'}],
     destinations: [destinationSchema]
 });
 
